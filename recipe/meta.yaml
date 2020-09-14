@@ -1,5 +1,5 @@
 {% set name = "ipyradiant" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipyradiant-{{ version }}.tar.gz
-  sha256: b65c90d3f2aa335a6ae10d336dcd2d0f94e65763fb4ddc572ca857cb55213f4e
+  sha256: cc5b0057c88ec5f7d6f036effde9a5556d376f44fe95c141725e5df5093a6b0b
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - holoviews
     - ipycytoscape >=1.0.3
     - ipywidgets
-    - networkx
+    - networkx >=2
     - pandas
     - python >=3.6
     - qgrid
