@@ -5,11 +5,9 @@ Home: https://github.com/jupyrdf/ipyradiant
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipyradiant-feedstock/blob/master/LICENSE.txt)
 
 Summary: Jupyter Widgets for working with RDF graphs
-
-
 
 Current build status
 ====================
@@ -117,4 +115,5 @@ Feedstock Maintainers
 =====================
 
 * [@bollwyvl](https://github.com/bollwyvl/)
+* [@zwelz3](https://github.com/zwelz3/)
 
