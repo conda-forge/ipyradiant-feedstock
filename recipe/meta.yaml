@@ -1,13 +1,13 @@
 {% set name = "ipyradiant" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipyradiant-{{ version }}.tar.gz
-  sha256: cc5b0057c88ec5f7d6f036effde9a5556d376f44fe95c141725e5df5093a6b0b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d7e2cfe36e8c5ab56bc99acd3453c39a17d993ce9cf408f95995b3534e0c03e5
 
 build:
   number: 0
@@ -27,7 +27,6 @@ requirements:
     - networkx >=2
     - pandas
     - python >=3.6
-    - qgrid
     - rdflib
     - rdflib-jsonld
     - scikit-image
@@ -49,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - bollwyvl
+    - zwelz3
