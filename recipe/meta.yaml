@@ -1,5 +1,5 @@
 {% set name = "ipyradiant" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d7e2cfe36e8c5ab56bc99acd3453c39a17d993ce9cf408f95995b3534e0c03e5
+  sha256: a81c9e12589a4fd9f6f680a8e068ac2693fdebb77394d4323685d9ae7c45be84
 
 build:
   number: 0
@@ -22,8 +22,8 @@ requirements:
     - bokeh
     - datashader
     - holoviews
-    - ipycytoscape >=1.0.3
-    - ipywidgets
+    - ipycytoscape >=1.2
+    - ipywidgets >=7.6,<8
     - networkx >=2
     - pandas
     - python >=3.6
