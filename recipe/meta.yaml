@@ -1,23 +1,24 @@
-{% set name = "ipyradiant" %}
 {% set version = "0.2.0" %}
 
 package:
-  name: {{ name }}
+  name: ipyradiant
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/i/ipyradiant/ipyradiant-{{ version }}.tar.gz
   sha256: a81c9e12589a4fd9f6f680a8e068ac2693fdebb77394d4323685d9ae7c45be84
 
 build:
   number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  script:
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - bokeh
     - datashader
@@ -32,13 +33,13 @@ requirements:
     - scikit-image
 
 test:
-  imports:
-    - ipyradiant
-  commands:
-    - python -m pip check
   requires:
     - pip
     - python {{ python_min }}
+  imports:
+    - ipyradiant
+  commands:
+    - pip check
 
 about:
   home: https://github.com/jupyrdf/ipyradiant
