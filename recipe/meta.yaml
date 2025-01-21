@@ -28,7 +28,7 @@ requirements:
     - networkx >=2
     - pandas
     - python >={{ python_min }}
-    - rdflib
+    - rdflib <7
     - rdflib-jsonld
     - scikit-image
 
